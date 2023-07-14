@@ -154,7 +154,7 @@ public class ResourceCentreTest {
 		
 		// Test that the details are displayed correctly
 		assertEquals("Test that the display is correct.", testOutput, allChromebook);
-		//hi
+
 	}
 	
 	@Test
