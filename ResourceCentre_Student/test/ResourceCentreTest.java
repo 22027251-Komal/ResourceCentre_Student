@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 // C206 AY2023 SEM1 - Eclipse 21-09 JDK16
 
-public class ResourceCentreTest {
+public class ResourceCentreTest { 
 	// prepare test data
 	private Camcorder cc1;
 	private Camcorder cc2;
@@ -45,7 +45,7 @@ public class ResourceCentreTest {
 		// Given an empty list, after adding 1 item, the size of the list is 1
 		ResourceCentre.addCamcorder(camcorderList, cc1);
 		assertEquals("Test that the Camcorder arraylist size is 1.", 1, camcorderList.size());
-
+  
 		// Add an item
 		ResourceCentre.addCamcorder(camcorderList, cc2);
 		assertEquals("Test that the Camcorder arraylist size is now 2.", 2, camcorderList.size());
@@ -277,5 +277,5 @@ public class ResourceCentreTest {
 		chromebookList = null;
 
 	}
-	// completed
+
 }

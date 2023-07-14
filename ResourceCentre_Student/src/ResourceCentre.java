@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class ResourceCentre {
 
-	public static void main(String[] args) {// jgkgkjk
-
+	public static void main(String[] args) {
+ 
 		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
 		ArrayList<Chromebook> chromebookList = new ArrayList<Chromebook>();
 
@@ -339,11 +339,11 @@ public class ResourceCentre {
 			}
 		}
 		return isReturned;
-	}
+	} 
 
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
-		ResourceCentre.viewAllChromebook(chromebookList);
+		ResourceCentre.viewAllChromebook(chromebookList); 
 		String tag = Helper.readString("Enter asset tag > ");
 		Boolean isReturned = doReturnChromebook(chromebookList, tag);
 
@@ -355,3 +355,5 @@ public class ResourceCentre {
 	}
 
 }
+
+
