@@ -257,6 +257,43 @@ public class ResourceCentre {
 	}
 	
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
+<<<<<<< HEAD
+	    // write your code here
+	    boolean isLoaned = false;
+
+	    if (tag.isEmpty() || dueDate.isEmpty())
+	      return false;
+	    
+	    for (int i = 0; i < chromebookList.size(); i++) {
+	      if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
+	          && chromebookList.get(i).getIsAvailable() == true) {
+	        
+	        chromebookList.get(i).setIsAvailable(false);
+	        chromebookList.get(i).setDueDate(dueDate);
+	        
+	        isLoaned = true;
+	      }
+	    }
+	    return isLoaned;
+	  }
+	  
+	  public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
+	    // write your code here  
+	    ResourceCentre.viewAllChromebook(chromebookList);
+	    String tag = Helper.readString("Enter asset tag > ");
+	    String due = Helper.readString("Enter due date > ");
+	    Boolean isLoaned =doLoanChromebook(chromebookList, tag, due);
+	    if (isLoaned == false) {
+	      System.out.println("Invalid asset tag");
+	    } else {
+	      System.out.println("Camcorder " + tag + " loaned out");
+	    }
+	  }
+
+	// ================================= Option 4 Return an item (CRUD -
+	// Update)=================================
+	public static boolean doReturnCamcorder(ArrayList<Camcorder> camcorderList, String tag) {
+=======
 		// write your code here
 		boolean isLoaned = false;
 
@@ -291,6 +328,7 @@ public class ResourceCentre {
 	
 	//================================= Option 4 Return an item (CRUD - Update)=================================
 	public static boolean doReturnCamcorder(ArrayList<Camcorder> camcorderList,String tag) {
+>>>>>>> branch 'master' of https://github.com/22027251-Komal/ResourceCentre_Student.git
 		boolean isReturned = false;
 
 		if (tag.isEmpty())
