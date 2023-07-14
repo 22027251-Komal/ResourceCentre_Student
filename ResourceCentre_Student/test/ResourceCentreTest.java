@@ -68,6 +68,27 @@ public class ResourceCentreTest {
 	public void testAddChromebook() {
 		//fail("Not yet implemented");
 		// write your code here 
+		assertNotNull("Test is there is valid Chromebook arraylist to add to", chromebookList);
+		assertEquals("Test that the Chromebook arraylist is empty.", 0, chromebookList.size());
+		//Given an empty list, after adding 1 item, the size of the list is 1
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		assertEquals("Test that the Chromebook arraylist size is 1.", 1, chromebookList.size());
+		
+		//Add an item
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		assertEquals("Test that Chromebook arraylist size is 2.", 2, chromebookList.size());
+		//The item just added is as same as the last item in the list
+		assertSame("Test that Chromebook is added to the end of the list.", cb2, chromebookList.get(1));
+		
+		//Add an item that already exists in the list
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		assertEquals("Test that the Chromebook arraylist size is unchange.", 2, chromebookList.size());
+		
+		//Add an item that has missing detail
+		Chromebook cb_missing = new Chromebook("CB0014", "", "Mac 10");
+		ResourceCentre.addChromebook(chromebookList, cb_missing);
+		assertEquals("Test that the Chromebook arraylist size is unchange.", 2, chromebookList.size());
+		//add chromebook
 	}
 
 	@Test
@@ -122,7 +143,7 @@ public class ResourceCentreTest {
 		Boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
 		assertTrue("Test if an available item is ok to loan?", ok);
 		assertFalse(camcorderList.get(0).getIsAvailable());
-		assertEquals(camcorderList.get(0).getDueDate(),"8-8-2020");
+		assertEquals(camcorderList.get(0).getDueDate(),"8-8-2020");   
 
 		// Test Case 2 - Loan an unavailable item
 		cc2.setIsAvailable(false);
@@ -140,6 +161,7 @@ public class ResourceCentreTest {
 		assertTrue("Test that there is an item available", camcorderList.get(2).getIsAvailable());
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0013", "" );
 		assertFalse("Test that the loan fails.", ok);
+		
 	}
 
 	@Test
