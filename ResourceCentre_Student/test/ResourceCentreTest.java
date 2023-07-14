@@ -88,7 +88,7 @@ public class ResourceCentreTest {
 		Chromebook cb_missing = new Chromebook("CB0014", "", "Mac 10");
 		ResourceCentre.addChromebook(chromebookList, cb_missing);
 		assertEquals("Test that the Chromebook arraylist size is unchange.", 2, chromebookList.size());
-		//add
+		//add chromebook
 	}
 
 	@Test
@@ -161,7 +161,7 @@ public class ResourceCentreTest {
 		assertTrue("Test that there is an item available", camcorderList.get(2).getIsAvailable());
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0013", "" );
 		assertFalse("Test that the loan fails.", ok);
-		//hi
+		
 	}
 
 	@Test
