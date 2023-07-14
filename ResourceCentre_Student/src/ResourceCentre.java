@@ -194,22 +194,10 @@ public class ResourceCentre {
 	}
 	
 	public static Chromebook inputChromebook() {	
-<<<<<<< HEAD
-=======
-		//Chromebook cb =null;
->>>>>>> branch 'master' of https://github.com/22027251-Komal/ResourceCentre_Student.git
-		// write your code here
-<<<<<<< HEAD
 		String tag = Helper.readString("Enter asset tag > ");
 		String description = Helper.readString("Enter description > ");
 		String os = Helper.readString("Enter OS > ");
 		Chromebook cb = new Chromebook(tag, description, os);
-=======
-		String assetTag = Helper.readString("Enter asset tag > ");
-		String description = Helper.readString("Enter description > ");
-		String os = Helper.readString("Enter os > ");
-		Chromebook cb = new Chromebook(assetTag, description, os);
->>>>>>> branch 'master' of https://github.com/22027251-Komal/ResourceCentre_Student.git
 		
 		return cb;
 		
@@ -217,24 +205,23 @@ public class ResourceCentre {
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
 		// write your code here
 		Chromebook item;
-<<<<<<< HEAD
 		for (int i = 0; i < chromebookList.size(); i++) {
 			item = chromebookList.get(i);
 			if (item.getAssetTag().equalsIgnoreCase(cb.getAssetTag()))
 				return;
 		}
 		if ((cb.getAssetTag().isEmpty()) || (cb.getDescription().isEmpty())) {
-=======
+
 		for(int i = 0; i < chromebookList.size(); i++) {
 			item = chromebookList.get(i);
 			if(item.getAssetTag().equalsIgnoreCase(cb.getAssetTag()) )
 				return;
 		}
 		if((cb.getAssetTag().isEmpty())|| (cb.getDescription().isEmpty()) ) {
->>>>>>> branch 'master' of https://github.com/22027251-Komal/ResourceCentre_Student.git
 			return;
 		}
 		chromebookList.add(cb);
+		}
 	}
 	
 	//================================= Option 3 Loan an item (CRUD - Update) =================================
