@@ -142,7 +142,7 @@ public class ResourceCentreTest {
 		Boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
 		assertTrue("Test if an available item is ok to loan?", ok);
 		assertFalse(camcorderList.get(0).getIsAvailable());
-		assertEquals(camcorderList.get(0).getDueDate(),"8-8-2020");
+		assertEquals(camcorderList.get(0).getDueDate(),"8-8-2020");   
 
 		// Test Case 2 - Loan an unavailable item
 		cc2.setIsAvailable(false);
