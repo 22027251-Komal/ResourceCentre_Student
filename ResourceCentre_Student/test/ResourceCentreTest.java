@@ -88,6 +88,7 @@ public class ResourceCentreTest {
 		Chromebook cb_missing = new Chromebook("CB0014", "", "Mac 10");
 		ResourceCentre.addChromebook(chromebookList, cb_missing);
 		assertEquals("Test that the Chromebook arraylist size is unchange.", 2, chromebookList.size());
+		//add
 	}
 
 	@Test
